@@ -38,15 +38,15 @@ for num, word in enumerate(sentence, 1):
 print('task5')
 reiting = [7, 6, 3, 3, 2, 2]
 new_reit = int(input("write new reiting: "))
-reiting_s = list(set(reiting))
-reiting_s = reiting_s[::-1]
-i = 0
-if new_reit <= reiting[-1]:
-    new_index = len(reiting)  # len(reiting)
-else:
+i = 1
+new_index = len(reiting)
+while i < len(reiting):
+    if new_reit > reiting[len(reiting)-i]:
+        new_index = len(reiting)-i  # len(reiting)
+    i = i + 1
+if new_reit > reiting[0]:
     new_index = 0
-    while reiting_s[i] > new_reit:
-        new_index = reiting.index(reiting_s[i])+1
-        i = i + 1
 reiting.insert(new_index, new_reit)
 print(reiting)
+
+
