@@ -1,4 +1,4 @@
-def anketa():
+def anketa(*args, **kwargs):
     """
     :return: one line with all user's info (FIO, bday, city, tel, email
     """

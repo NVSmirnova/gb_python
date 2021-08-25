@@ -1,4 +1,4 @@
-def division_even_zero(arg1, arg2):
+def division_even_zero(arg1, arg2, *args, **kwargs):
     try:
         otv = arg1 / arg2
     except ZeroDivisionError:
